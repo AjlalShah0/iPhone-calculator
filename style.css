@@ -1,0 +1,86 @@
+button{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    font-size: 3rem;
+    color: white;
+    background-color: hsl(0, 0%, 30%);
+}
+.calculator{
+    background-color: hsl(0, 0%, 15%);
+    width: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow:0px 0px 20px #957575 ;
+    animation: example 0.4s ease-in-out ;
+}
+body{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+	background-size:cover;
+}
+.keys{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 5px;
+}
+#display{
+    text-align: left;
+    width: 100%;
+    border: none;
+    padding: 20px;
+    font-size: 5rem;
+    color: white;
+    background-color: hsl(0, 0%, 35%);
+}
+button:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+button:active{
+    background-color: hsl(0, 0%, 50%);
+}
+.operator{
+    background-color: hsl(37, 94%, 50%);
+}
+.operator:hover{
+    background-color: hsl(37, 94%, 60%);
+}
+.operator:active{
+    background-color: hsl(37, 94%, 70%);
+}
+@media only screen and (max-width:460px) and (min-width:375px) {
+    .calculator{
+        width: 90%;
+    }
+    button{
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    #display{
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width:375px) {
+    .calculator{
+        width: 90%;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    #display{
+        font-size: 2rem;
+    }
+}
+@keyframes example {
+    0%   {transform: translate(0px ,50px); opacity:0.5;}
+	100% {transform: translate(0px ,0px); opacity:1;}
+}
